@@ -1,0 +1,27 @@
+{
+    "name": "EventTouchScreen",
+    "version": "0.5.0",
+    "description": "Experimaental TouchScreen Events",
+    "keywords": "Arduino, ESP8266, ESP32, Teensy, button",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/Stutchbury/EventTouchScreen.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Philip Fletcher",
+        "email": "philip.fletcher@stutchbury.com",
+        "url": "https://stutchbury.com",
+        "maintainer": true
+      }
+    ],
+    "license": "GPL-2.0",
+    "homepage": "https://github.com/Stutchbury/EventTouchScreen/",
+    "dependencies": {
+    },
+    "frameworks": "Arduino",
+    "platforms": "*"
+  }
+  
