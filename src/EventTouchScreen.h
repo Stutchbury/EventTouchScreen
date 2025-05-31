@@ -259,7 +259,7 @@ class EventTouchScreen : public EventInputBase {
      */
     TouchScreenAdapter::TouchPoint getTouchPoint() { 
         if ( touchPoint.z == 0 ) { 
-            touchPoint = previousTouchPoint;
+            touchPoint = lastTouchedPoint;
             touchPoint.z = 0;
         }
         return touchPoint; 
@@ -345,6 +345,7 @@ private:
     TouchScreenAdapter::TouchPoint touchPoint = TouchScreenAdapter::TouchPoint();
     TouchScreenAdapter::TouchPoint startTouchPoint = TouchScreenAdapter::TouchPoint();
     TouchScreenAdapter::TouchPoint previousTouchPoint = TouchScreenAdapter::TouchPoint();
+    TouchScreenAdapter::TouchPoint lastTouchedPoint = TouchScreenAdapter::TouchPoint();
     
 
     //setup

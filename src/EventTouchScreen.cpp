@@ -30,6 +30,9 @@ void EventTouchScreen::update() {
         if( millis() > (rateLimitCounter + rateLimit) ) { 
             rateLimitCounter = millis();
             if ( debounced()) {
+                if ( touchPoint.z != 0 ) {
+                    lastTouchedPoint = touchPoint;
+                }
                 if ( !touched && touchPoint.z != 0 ) {
                     changeState(true);
                     startTouchPoint = touchPoint;
@@ -101,7 +104,6 @@ void EventTouchScreen::update() {
 void EventTouchScreen::invoke(InputEventType et) {
     if ( isInvokable(et) ) {
         callbackFunction(et, *this);
-        //callbackFunction();
     }    
 }
 
